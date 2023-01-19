@@ -22,6 +22,16 @@ testProgect
     DbContext
     Models
     Repository
+8.Добавили модель в PS.MelonRestaurant.Services.ProductAPI.Models
+    Product
+8.Добавили Dto модели в PS.MelonRestaurant.Services.ProductAPI.Models
+    ProductDto - описывает нашу модель Product
+    ResponseDto - для получение ответа
+9.Настройка контекста бд для ProductAPI
+    -Создание класса ApplicationDbContext для работы с бд
+    -Добавил в конфигурацию appsettings строку подключения DefaultConnection
+    -Подкоючил в Program работу в бд
+
 
 
 
