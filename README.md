@@ -31,7 +31,8 @@ testProgect
     -Создание класса ApplicationDbContext для работы с бд
     -Добавил в конфигурацию appsettings строку подключения DefaultConnection
     -Подкоючил в Program работу в бд
-
+10.Создаём в PS.MelonRestaurant.Services.ProductAPI конфигурацию для маппинга
+    MappingConfig
 
 
 
