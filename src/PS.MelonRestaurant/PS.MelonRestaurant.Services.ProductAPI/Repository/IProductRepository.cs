@@ -1,0 +1,12 @@
+﻿using PS.MelonRestaurant.Services.ProductAPI.Models.Dto;
+
+namespace PS.MelonRestaurant.Services.ProductAPI.Repository
+{
+    public interface IProductRepository
+    {
+        Task<IEnumerable<ProductDto>> GetProducts();
+        Task<ProductDto> GetProductById(Guid id);
+        Task<ProductDto> CreateUpdateProduct(ProductDto product);
+        Task<bool> DeleteProduct(Guid id);
+    }
+}
