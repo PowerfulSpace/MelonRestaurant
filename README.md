@@ -32,12 +32,12 @@ testProgect
     -Добавил в конфигурацию appsettings строку подключения DefaultConnection
     -Подкоючил в Program работу в бд
 10.Добавление миграции в проект PS.MelonRestaurant.Services.ProductAPI
-11.Создание репозитория для выполнения всех CRUD операций в PS.MelonRestaurant.Services.ProductAPI в дериктории Repository
+11.Создаём в PS.MelonRestaurant.Services.ProductAPI конфигурацию для маппинга
+    MappingConfig
+12.Подключаем мапинг продукта в Program   
+13.Создание репозитория для выполнения всех CRUD операций в PS.MelonRestaurant.Services.ProductAPI в дериктории Repository
     ProductRepository
     IProductRepository
-12.Создаём в PS.MelonRestaurant.Services.ProductAPI конфигурацию для маппинга
-    MappingConfig
-
 
 
 

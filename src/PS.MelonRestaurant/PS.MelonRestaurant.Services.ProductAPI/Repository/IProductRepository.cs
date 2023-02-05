@@ -6,7 +6,7 @@ namespace PS.MelonRestaurant.Services.ProductAPI.Repository
     {
         Task<IEnumerable<ProductDto>> GetProducts();
         Task<ProductDto> GetProductById(Guid id);
-        Task<ProductDto> CreateUpdateProduct(ProductDto product);
+        Task<ProductDto> CreateUpdateProduct(ProductDto productDto);
         Task<bool> DeleteProduct(Guid id);
     }
 }
