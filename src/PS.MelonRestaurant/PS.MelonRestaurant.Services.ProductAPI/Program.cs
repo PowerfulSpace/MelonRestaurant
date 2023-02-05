@@ -1,10 +1,17 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using PS.MelonRestaurant.Services.ProductAPI;
 using PS.MelonRestaurant.Services.ProductAPI.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 // Learn more about configuring Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
