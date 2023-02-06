@@ -41,6 +41,8 @@ testProgect
 14.Создать API Controller для работы с API в PS.MelonRestaurant.Services.ProductAPI.Models и реализовать там все методы CRUD операций
     ProductAPIController
 15.Добавление Seed для наших продуктов в бд, По желанию. Выполнить миграцию
+16.Подключаем API сервис в WEB приложении PS.MelonRestaurant.Web
+    в appsettings.json создаём urls сервисы
 
 
 
