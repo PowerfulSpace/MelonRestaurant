@@ -35,10 +35,11 @@ testProgect
 11.Создаём в PS.MelonRestaurant.Services.ProductAPI конфигурацию для маппинга
     MappingConfig
 12.Подключаем мапинг продукта в Program   
-13.Создание репозитория для выполнения всех CRUD операций в PS.MelonRestaurant.Services.ProductAPI в дериктории Repository
+13.Создание репозитория для выполнения всех CRUD операций в PS.MelonRestaurant.Services.ProductAPI в дериктории Repository, и реализуем
     ProductRepository
     IProductRepository
-
+14.Создать API Controller для работы с API в PS.MelonRestaurant.Services.ProductAPI.Models и реализовать там все методы CRUD операций
+    ProductAPIController
 
 
 
