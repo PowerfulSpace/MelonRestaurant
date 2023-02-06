@@ -12,6 +12,6 @@ namespace PS.MelonRestaurant.Services.ProductAPI.Models
         public decimal Price { get; set; }
         public string Description { get; set; } = string.Empty;
         public string CategoryName { get; set; } = string.Empty;
-        public string imageUrl { get; set; } = string.Empty;
+        public string ImageUrl { get; set; } = string.Empty;
     }
 }
