@@ -1,4 +1,4 @@
-﻿namespace PS.MelonRestaurant.Services.ProductAPI.Models.Dto
+﻿namespace PS.MelonRestaurant.Web.Models
 {
     public class ProductDto
     {
