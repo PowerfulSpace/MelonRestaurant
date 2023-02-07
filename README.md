@@ -49,10 +49,16 @@ testProgect
 
 16. Подключаем API сервис в WEB приложении PS.MelonRestaurant.Web
     в appsettings.json создаём urls сервисы
-17. Создаём карту памяти для удобства в работе с API
+17. Создаём класс для удобства в работе с API который будет статическим и хранить константы
+    SD
 18. Создание своих собственной модели DTO для работы с product в PS.MelonRestaurant.Web
     ProductDto
     ResponseDto
 19. Создание дериктории Services в PS.MelonRestaurant.Web для работы с репозиториями подключенных сервисов
-20. Создание интерфейса сервиса со всеми CRUD операциями в PS.MelonRestaurant.Web
+20. Создание интерфейса сервиса со всеми CRUD операциями в PS.MelonRestaurant.Web в директории Services,IServices
     IProductService
+21. Создание модели запроссов который будет использоваться для отправки на разные сервисы API
+    APIRequest
+22. Создание интерфейса базового сервиса и его реализация
+    IBaseService
+    BaseService

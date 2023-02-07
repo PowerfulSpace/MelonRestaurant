@@ -1,6 +1,6 @@
 ﻿using PS.MelonRestaurant.Web.Models;
 
-namespace PS.MelonRestaurant.Web.Services
+namespace PS.MelonRestaurant.Web.Services.IServices
 {
     public interface IProductService
     {
