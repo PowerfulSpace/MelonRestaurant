@@ -62,3 +62,5 @@ testProgect
 22. Создание интерфейса базового сервиса и его реализация
     IBaseService
     BaseService
+23. Добавили пакет в  PS.MelonRestaurant.Web
+    Newtonsoft.Json
