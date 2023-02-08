@@ -62,8 +62,8 @@ namespace PS.MelonRestaurant.Web.Services
                     IsSuccess = false
                 };
                 var res = JsonConvert.SerializeObject(dto);
-                var apiResponseDto = JsonConvert.DeserializeObject(res);
-                return apiResponseDto;
+                var apiResponseDto = JsonConvert.DeserializeObject<T>(res);
+                return apiResponseDto!;
             }
         }
 
