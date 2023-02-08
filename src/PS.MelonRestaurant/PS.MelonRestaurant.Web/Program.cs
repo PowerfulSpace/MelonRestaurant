@@ -12,7 +12,7 @@ SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
 builder.Services.AddHttpClient<IProductService, ProductService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

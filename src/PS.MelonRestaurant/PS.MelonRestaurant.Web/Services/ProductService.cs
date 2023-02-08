@@ -16,7 +16,7 @@ namespace PS.MelonRestaurant.Web.Services
             var apiRequest = new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/products/",
+                Url = SD.ProductAPIBase + "/api/products",
                 AccessToken = ""
             };
             return await this.SendAsync<T>(apiRequest);
@@ -27,7 +27,7 @@ namespace PS.MelonRestaurant.Web.Services
             var apiRequest = new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/products/" + id,
+                Url = SD.ProductAPIBase + "/api/products" + id,
                 AccessToken = ""
             };
             return await this.SendAsync<T>(apiRequest);
@@ -39,7 +39,7 @@ namespace PS.MelonRestaurant.Web.Services
             {
                 ApiType = SD.ApiType.POST,
                 Data = productDto,
-                Url = SD.ProductAPIBase + "/api/products/",
+                Url = SD.ProductAPIBase + "/api/products",
                 AccessToken = ""
             };
             return await this.SendAsync<T>(apiRequest);
@@ -51,7 +51,7 @@ namespace PS.MelonRestaurant.Web.Services
             {
                 ApiType = SD.ApiType.PUT,
                 Data = productDto,
-                Url = SD.ProductAPIBase + "/api/products/",
+                Url = SD.ProductAPIBase + "/api/products",
                 AccessToken = ""
             };
             return await this.SendAsync<T>(apiRequest);
@@ -62,7 +62,7 @@ namespace PS.MelonRestaurant.Web.Services
             var apiRequest = new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = SD.ProductAPIBase + "/api/products/" + id,
+                Url = SD.ProductAPIBase + "/api/products" + id,
                 AccessToken = ""
             };
             return await this.SendAsync<T>(apiRequest);
