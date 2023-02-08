@@ -51,16 +51,23 @@ testProgect
     в appsettings.json создаём urls сервисы
 17. Создаём класс для удобства в работе с API который будет статическим и хранить константы
     SD
-18. Создание своих собственной модели DTO для работы с product в PS.MelonRestaurant.Web
+18. Добавили пакет в  PS.MelonRestaurant.Web
+    Newtonsoft.Json
+19. Создание своих собственной модели DTO для работы с product в PS.MelonRestaurant.Web
     ProductDto
     ResponseDto
-19. Создание дериктории Services в PS.MelonRestaurant.Web для работы с репозиториями подключенных сервисов
-20. Создание интерфейса сервиса со всеми CRUD операциями в PS.MelonRestaurant.Web в директории Services,IServices
+20. Создание дериктории Services в PS.MelonRestaurant.Web для работы с репозиториями подключенных сервисов
+21. Создание интерфейса сервиса со всеми CRUD операциями в PS.MelonRestaurant.Web в директории Services.IServices
     IProductService
-21. Создание модели запроссов который будет использоваться для отправки на разные сервисы API
+22. Создание модели запроссов который будет использоваться для отправки на разные сервисы API
     APIRequest
-22. Создание интерфейса базового сервиса и его реализация
+23. Создание интерфейса базового сервиса и его реализация
     IBaseService
     BaseService
-23. Добавили пакет в  PS.MelonRestaurant.Web
-    Newtonsoft.Json
+24. Реализация IProductService
+    ProductService
+25. Настроить доступ к сервисам, через внедрение зависимости в Program PS.MelonRestaurant.Web
+    builder.Services.AddHttpClient<IProductService, ProductService>();
+    builder.Services.AddScoped<IProductService, ProductService>();
+26. Настроить базовый путь для ProductAPIBase
+    SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
