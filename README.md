@@ -51,8 +51,9 @@ testProgect
     в appsettings.json создаём urls сервисы
 17. Создаём класс для удобства в работе с API который будет статическим и хранить константы
     SD
-18. Добавили пакет в  PS.MelonRestaurant.Web
+18. Добавили Nuget пакет в  PS.MelonRestaurant.Web
     Newtonsoft.Json
+    Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
 19. Создание своих собственной модели DTO для работы с product в PS.MelonRestaurant.Web
     ProductDto
     ResponseDto
@@ -71,3 +72,9 @@ testProgect
     builder.Services.AddScoped<IProductService, ProductService>();
 26. Настроить базовый путь для ProductAPIBase
     SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
+27. Подключение в _Layout Program PS.MelonRestaurant.Web работу с иконками
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+29. Изменение стиля страницы, по желанию
+    Добавление логотипа
+    Изменение колонтиутлов на тёмный
+    
