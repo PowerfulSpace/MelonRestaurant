@@ -87,6 +87,7 @@ namespace PS.MelonRestaurant.Services.ProductAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public async Task<ResponseDto> Delete(Guid id)
         {
             try
