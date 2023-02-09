@@ -27,7 +27,7 @@ namespace PS.MelonRestaurant.Web.Controllers
             return View(products);
         }
 
-        public async Task<IActionResult> ProductCreate()
+        public IActionResult ProductCreate()
         {
             return View();
         }
@@ -41,6 +41,62 @@ namespace PS.MelonRestaurant.Web.Controllers
                 var response = await _productService.CreateProductAsync<ResponseDto>(model);
 
                 if (response.Result != null && response.IsSuccess)
+                {
+                    return RedirectToAction(nameof(ProductIndex));
+                }
+            }
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> ProductEdit(Guid id)
+        {
+            var response = await _productService.GetProductByIdAsync<ResponseDto>(id);
+            if (response.Result != null && response.IsSuccess)
+            {
+                ProductDto model = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(response.Result));
+                return View(model);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductEdit(ProductDto model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _productService.UpdateProductAsync<ResponseDto>(model);
+
+                if (response.Result != null && response.IsSuccess)
+                {
+                    return RedirectToAction(nameof(ProductIndex));
+                }
+            }
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> ProductDelete(Guid id)
+        {
+            var response = await _productService.GetProductByIdAsync<ResponseDto>(id);
+            if (response.Result != null && response.IsSuccess)
+            {
+                ProductDto model = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(response.Result));
+                return View(model);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductDelete(ProductDto model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _productService.DeleteProductAsync<ResponseDto>(model.Id);
+
+                if (response.IsSuccess)
                 {
                     return RedirectToAction(nameof(ProductIndex));
                 }

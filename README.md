@@ -82,3 +82,4 @@ testProgect
 31. Добавление представления в PS.MelonRestaurant.Web
     ProductIndex
     ProductCreate
+    ProductEdit
