@@ -77,7 +77,8 @@ testProgect
 29. Изменение стиля страницы, по желанию
     Добавление логотипа
     Изменение колонтиутлов на тёмный
-30. Добавление контроллера в PS.MelonRestaurant.Web
+30. Добавление контроллера в PS.MelonRestaurant.Web и создание методов на CRUD операции
     ProductController
-30. Добавление представления в PS.MelonRestaurant.Web
+31. Добавление представления в PS.MelonRestaurant.Web
     ProductIndex
+    ProductCreate

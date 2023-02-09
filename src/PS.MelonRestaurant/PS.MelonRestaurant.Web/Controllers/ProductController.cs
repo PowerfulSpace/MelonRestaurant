@@ -26,5 +26,27 @@ namespace PS.MelonRestaurant.Web.Controllers
 
             return View(products);
         }
+
+        public async Task<IActionResult> ProductCreate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductCreate(ProductDto model)
+        {
+            if(ModelState.IsValid)
+            {
+                var response = await _productService.CreateProductAsync<ResponseDto>(model);
+
+                if (response.Result != null && response.IsSuccess)
+                {
+                    return RedirectToAction(nameof(ProductIndex));
+                }
+            }
+
+            return View(model);
+        }
     }
 }
