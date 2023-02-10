@@ -79,7 +79,12 @@ testProgect
     Изменение колонтиутлов на тёмный
 30. Добавление контроллера в PS.MelonRestaurant.Web и создание методов на CRUD операции
     ProductController
+        ProductIndex
+        ProductCreate
+        ProductEdit
+        ProductDelete
 31. Добавление представления в PS.MelonRestaurant.Web
     ProductIndex
     ProductCreate
     ProductEdit
+    ProductDelete
